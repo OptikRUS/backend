@@ -13,8 +13,9 @@ class Command(BaseCommand):
         Author.objects.all().delete()
         count = options['count']
         for i in range(count):
-            author = Author.objects.create(first_name=f'fname{i}',
-                                           last_name=f'lname{i}',
-                                           birthday_year=1700 + i)
+            author = Author.objects.create(
+                first_name=f'fname{i}',
+                last_name=f'lname{i}',
+                birthday_year=1700 + i)
             print(f'author {author.first_name} created')
         print('done')
