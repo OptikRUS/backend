@@ -10,7 +10,7 @@ class Command(BaseCommand):
         parser.add_argument('count', type=int)
 
     def handle(self, *args, **options):
-        # Author.objects.all().delete()
+        Author.objects.all().delete()
         count = options['count']
         for i in range(count):
             author = Author.objects.create(first_name=f'fname{i}',
