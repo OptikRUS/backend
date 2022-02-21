@@ -2,6 +2,7 @@ import React from "react";
 import logo from './logo.svg';
 import './App.css';
 import AuthorList from './components/AutorList'
+import UserList from "./components/UserList";
 import axios from "axios";
 
 
@@ -9,9 +10,8 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            'authors': [
-
-            ]
+            'authors': [],
+            'users': []
         }
     }
 
@@ -22,7 +22,18 @@ class App extends React.Component {
                 const authors = response.data
 
                 this.setState({
-                    'authors': authors
+                    'authors': authors,
+                })
+            })
+            .catch(error => console.log(error))
+
+        axios
+            .get('http://127.0.0.1:8000/api/users/')
+            .then( response => {
+                const users = response.data
+
+                this.setState({
+                    'users': users,
                 })
             })
             .catch(error => console.log(error))
@@ -32,6 +43,8 @@ class App extends React.Component {
         return (
             <div>
                 <AuthorList authors={this.state.authors} />
+                <br/>
+                <UserList users={this.state.users} />
             </div>
         )
     }
