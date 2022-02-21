@@ -1,8 +1,10 @@
 import React from "react";
 import logo from './logo.svg';
 import './App.css';
-import AuthorList from './components/AutorList'
+import AuthorList from './components/AutorList';
 import UserList from "./components/UserList";
+import Menu from "./components/menu";
+import Footer from "./components/footer";
 import axios from "axios";
 
 
@@ -42,10 +44,13 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <Menu />
                 <AuthorList authors={this.state.authors} />
                 <br/>
                 <UserList users={this.state.users} />
+                <Footer />
             </div>
+
         )
     }
 }

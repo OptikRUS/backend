@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+/* Отступ сверху для содержимого body (высота navbar = 50px)*/
+body
+{
+padding-top: 50px;
+}
+/* Заставка */
+.splash {
+/* Отступ для содержимого, помещенного в splash */
+padding:9em 0 2em;
+/* Картинка, которая используются для splash */
+background-image:url(https://grozny-inform.ru/LoadedImages/2021/05/31/fotooboi-412-114-knijnie-polki-zakazposterov-ru_z.jpg);
+/* Масштабируем картинку с сохранением пропорций */
+background-size:cover;
+/* Запрещаем фоновому изображению прокручиваться, т.е. делаем его неподвижным */
+background-attachment:fixed;
+/* Цвет текста */
+color:#fff;
+/* Выравниваем текста внутри splash по центру */
+text-align:center;
+}
+
+/* Main Footer */
+footer .main-footer{ padding: 20px 0; background: #252525;}
+footer ul{ padding-left: 0; list-style: none;}
+
+/* Copy Right Footer */
+.footer-copyright { background: #222; padding: 5px 0;}
+.footer-copyright .logo { display: inherit;}
+.footer-copyright nav { float: right; margin-top: 5px;}
+.footer-copyright nav ul { list-style: none; margin: 0; padding: 0;}
+.footer-copyright nav ul li { border-left: 1px solid #505050; display: inline-block; line-height: 12px; margin: 0; padding: 0 8px;}
+.footer-copyright nav ul li a{ color: #969696;}
+.footer-copyright nav ul li:first-child { border: medium none; padding-left: 0;}
+.footer-copyright p { color: #969696; margin: 2px 0 0;}
